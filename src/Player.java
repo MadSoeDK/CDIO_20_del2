@@ -1,7 +1,7 @@
 public class Player {
 
     private int placement;
-    private final String name;
+    private String name;
     Account account;
 
     //Sets up a Player with name, account and starting position
@@ -20,4 +20,5 @@ public class Player {
     public int getPlacement() {
         return placement;
     }
+    public String getName(){ return name; }
 }
