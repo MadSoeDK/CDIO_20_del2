@@ -1,7 +1,7 @@
 public class Game {
     public static void main(String[] args) {
 
-        //Instantiate each Field object and store in array
+        //Instantiate each Field and store in array
         Field[] fields = {
                 new Field("Tower", 250),
                 new Field("Crater", -100),
@@ -14,6 +14,12 @@ public class Game {
                 new Field("The Werewall (werewolf-wall)", -80),
                 new Field("The pit", -50),
                 new Field("Goldmine", 650),
+        };
+
+        //Instantiate each Player and store in array
+        Player[] players = {
+                new Player("Player 1"),
+                new Player("Player 2")
         };
     }
 }
