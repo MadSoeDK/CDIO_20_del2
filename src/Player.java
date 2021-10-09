@@ -10,8 +10,14 @@ public class Player {
         account = new Account();
         placement = 0;
     }
+
     public void changePlacement(int amount) {
         placement = placement + amount;
     }
-
+    public void setPlacement(int position) {
+        placement = position;
+    }
+    public int getPlacement() {
+        return placement;
+    }
 }
