@@ -10,6 +10,8 @@ public class Player {
         account = new Account();
         placement = 0;
     }
-
+    public void changePlacement(int amount) {
+        placement = placement + amount;
+    }
 
 }
