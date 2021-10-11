@@ -30,7 +30,11 @@ public class Game {
         // Start Game Loop
         while (1==1){
             System.out.println("Player 1 Starts, Press Enter");
-
+            /*
+            if (Player[0].account.getBalance){
+                //Check account balance
+            }
+            */
 
 
             // End Game

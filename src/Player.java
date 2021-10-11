@@ -20,5 +20,5 @@ public class Player {
     public int getPlacement() {
         return placement;
     }
-    public String getName(){ return name; }
+    public String getName(){ return name;}
 }
