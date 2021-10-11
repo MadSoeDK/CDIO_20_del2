@@ -1,5 +1,10 @@
+import java.util.Scanner;
+
 public class Game {
     public static void main(String[] args) {
+
+        // Create Scanner for player input
+        Scanner input = new Scanner(System.in);
 
         //Instantiate each Field and store in array
         Field[] fields = {
@@ -21,5 +26,15 @@ public class Game {
                 new Player("Player 1"),
                 new Player("Player 2")
         };
+
+        // Start Game Loop
+        while (1==1){
+            System.out.println("Player 1 Starts, Press Enter");
+
+
+
+            // End Game
+            break;
+        }
     }
 }
