@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Game {
     public static void main(String[] args) {
         // Set Variables
-        int sum = 0;
+        int sum;
         int currentPlayer = 0;
 
         // Create Scanner for player input
@@ -33,7 +33,7 @@ public class Game {
         // Instatiate Cup
         Cup rafleCup = new Cup();
 
-        // Start Game Loop
+        // Start Game Loop (Break statement is used to end game)
         while (1==1){
             System.out.println("Player " + (currentPlayer+1) + " Starts, Press Enter");
             String enter = input.nextLine(); // Press enter to continue
@@ -49,18 +49,23 @@ public class Game {
 
             // Move Player
                 players[currentPlayer].changePlacement(sum);
-                System.out.println("Your placement is: " + (1+players[currentPlayer].getPlacement()));
+                System.out.println("Your placement is: " + (players[currentPlayer].getPlacement()));
                 enter = input.nextLine(); // Press enter to continue
 
             // Complete Field Effect
-                System.out.println("You have arrived at: " + fields[sum-1].getName());
-                System.out.println(fields[sum-1].getDescription());
-                System.out.println("You Balance is changed by: "+ fields[sum-1].getRent());
-                players[currentPlayer].setPlayerBalance(fields[sum-1].getRent());
+                System.out.println("You have arrived at: " + fields[sum-2].getName());
+                System.out.println(fields[sum-2].getDescription());
+                System.out.println("You Balance is changed by: "+ fields[sum-2].getRent());
+                players[currentPlayer].setPlayerBalance(fields[sum-2].getRent());
                 System.out.println("You Balance is: " + players[currentPlayer].getPlayerBalance());
                 System.out.println("...");
 
             // Next turn
+            if (sum==10){
+                System.out.println("Because you ran from the Werewolves you gain an extra turn.");
+            }
+            else
+            {
                 if (currentPlayer==0){
                     currentPlayer=1;
                 }
@@ -68,7 +73,7 @@ public class Game {
                 {
                     currentPlayer=0;
                 }
-
+            }
 
             // End Game if player is
             if (players[currentPlayer].getPlayerBalance()>3000){
@@ -76,7 +81,6 @@ public class Game {
                 System.out.println("PLAYER " + (currentPlayer+1) + "HAS WON THE GAME BY EARNING 3000 POINTS");
                 break;
             }
-
         }
     }
 }
