@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Game {
     public static void main(String[] args) {
+        // Set Variables
+        int sum = 0;
+        int currentPlayer = 0;
 
         // Create Scanner for player input
         Scanner input = new Scanner(System.in);
@@ -27,18 +30,49 @@ public class Game {
                 new Player("Player 2")
         };
 
+        // Instatiate Cup
+        Cup rafleCup = new Cup();
+
         // Start Game Loop
         while (1==1){
-            System.out.println("Player 1 Starts, Press Enter");
-            /*
-            if (Player[0].account.getBalance){
+            System.out.println("Player " + (currentPlayer+1) + " Starts, Press Enter");
+            String enter = input.nextLine(); // Press enter to continue
+
+            // Get Player Balance
+            // Roll
+                sum=rafleCup.getSum();
+
+            // Get Sum
+                System.out.println("You rolled: " + rafleCup.getFacevalue1());
+                System.out.println("And then: " + rafleCup.getFacevalue2());
+                enter = input.nextLine(); // Press enter to continue
+
+            // Move Player
+                players[currentPlayer].changePlacement(sum);
+                System.out.println("Your placement is: " + players[currentPlayer].getPlacement());
+                enter = input.nextLine(); // Press enter to continue
+
+            // Complete Field Effect
+                System.out.println("You have arrived at: " + fields[sum].getName());
+                System.out.println(fields[sum].getDescription());
+
+            // Next turn
+                if (currentPlayer==0){
+                    currentPlayer=1;
+                }
+                else
+                {
+                    currentPlayer=0;
+                }
+
+
+            // End Game if player is
+            if (players[currentPlayer].getPlayerBalance()>3000){
                 //Check account balance
+                System.out.println("PLAYER " + (currentPlayer+1) + "HAS WON THE GAME BY EARNING 3000 POINTS");
+                break;
             }
-            */
 
-
-            // End Game
-            break;
         }
     }
 }
