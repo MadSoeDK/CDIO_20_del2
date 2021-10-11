@@ -8,8 +8,8 @@ public class Field {
 
     //Sets up field name and field rent for each object by using the arrays
     public Field (String fieldname, int fieldrent) {
-        fieldname = name;
-        fieldrent = rent;
+        name = fieldname;
+        rent = fieldrent;
     }
     public int getRent() {
         return rent;
