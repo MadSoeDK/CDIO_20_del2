@@ -20,7 +20,7 @@ public class Game {
                 new Field("Black Cave", -70, "You walk though a pitch Black Cave. You Step on a sharp rock and bleed profusely using almost all of your bandages."),
                 new Field("Huts in the Mountain", 60, "Idyllic little huts litter the clearance in the Mountains. A nice family offers you stay for the night and a free meal."),
                 new Field("The Werewall (Werewolf-Wall)", -80, "The full Moon stands proudly on the night sky, Howls of foul beasts chill your bones. RUN! Run the night away!"),
-                new Field("The Pit", -50, "You come across a great big hole in the ground and see two gladiators ready to fight! You place a bet, however on the one who will lose his head..."),
+                new Field("The Pit", -50, "You come across a great big hole in the ground with a big crowd around it and see two gladiators ready to fight! You place a bet, however on the one who will lose his head..."),
                 new Field("Goldmine", 650, "You enter a Gold Mine. Piles of Gold as far as the eye can see. You steal as much as you can carry without getting noticed!"),
         };
 
@@ -49,12 +49,16 @@ public class Game {
 
             // Move Player
                 players[currentPlayer].changePlacement(sum);
-                System.out.println("Your placement is: " + players[currentPlayer].getPlacement());
+                System.out.println("Your placement is: " + (1+players[currentPlayer].getPlacement()));
                 enter = input.nextLine(); // Press enter to continue
 
             // Complete Field Effect
                 System.out.println("You have arrived at: " + fields[sum-1].getName());
                 System.out.println(fields[sum-1].getDescription());
+                System.out.println("You Balance is changed by: "+ fields[sum-1].getRent());
+                players[currentPlayer].setPlayerBalance(fields[sum-1].getRent());
+                System.out.println("You Balance is: " + players[currentPlayer].getPlayerBalance());
+                System.out.println("...");
 
             // Next turn
                 if (currentPlayer==0){

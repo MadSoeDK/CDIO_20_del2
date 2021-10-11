@@ -22,4 +22,5 @@ public class Player {
     }
     public String getName(){ return name;}
     public int getPlayerBalance(){return account.getBalance();}
+    public void setPlayerBalance(int amount) {account.setBalance(amount);}
 }
