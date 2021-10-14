@@ -1,3 +1,5 @@
+package Model;
+
 public class Account {
 
     private int balance;
@@ -10,8 +12,10 @@ public class Account {
     public void changeBalance(int amount) {
         balance = balance + amount;
     }
-
     public int getBalance() {
         return balance;
+    }
+    public int setBalance(int amount) {
+        return balance = balance + amount;
     }
 }

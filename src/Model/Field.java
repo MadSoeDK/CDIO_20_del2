@@ -1,3 +1,5 @@
+package Model;
+
 public class Field {
 
     //Initialize variables

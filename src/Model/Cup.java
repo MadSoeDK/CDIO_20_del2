@@ -1,9 +1,12 @@
+package Model;
+
 public class Cup {
 
     // Initialize Variables
     private final int QUANTITY=2;
     private int sum;
     private int pair;
+
     // What did the die show
     private int facevalue1;
     private int facevalue2;
@@ -11,7 +14,7 @@ public class Cup {
     Die Die1;
     Die Die2;
 
-    // Create Die Objects
+    // Create Model.Die Objects
     public Cup() {
         Die1 = new Die();
         Die2 = new Die();

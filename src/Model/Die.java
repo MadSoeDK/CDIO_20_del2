@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.Random;
 
 public class Die {
@@ -11,7 +13,7 @@ public class Die {
 
     public int getFacevalue() {
         facevalue = rand.nextInt(MAXVALUE)+1;
-        System.out.println(facevalue);
+        //System.out.println(facevalue);
         return facevalue;
     }
 }

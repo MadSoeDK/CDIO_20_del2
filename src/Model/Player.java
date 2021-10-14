@@ -1,10 +1,15 @@
+package Model;
+
+import Model.Account;
+
 public class Player {
 
+    private boolean winner;
     private int placement;
     private String name;
     Account account;
 
-    //Sets up a Player with name, account and starting position
+    //Sets up a Model.Player with name, account and starting position
     public Player(String name) {
         this.name = name;
         account = new Account();
@@ -21,4 +26,13 @@ public class Player {
         return placement;
     }
     public String getName(){ return name; }
+    public int getPlayerBalance(){return account.getBalance();}
+    public void setPlayerBalance(int amount) {account.setBalance(amount);}
+    public boolean hasWon() {
+        if (account.getBalance() >= 3000) {
+            winner = true;
+            return true;
+        }
+        return false;
+    }
 }
