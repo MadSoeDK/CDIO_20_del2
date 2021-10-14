@@ -41,7 +41,7 @@ public class Game {
 
                     //Calculate current players balance
                     currentPlayer.setPlayerBalance(rent);
-                    TUI.printPlayerScore(currentPlayer);
+                    TUI.printPlayerBalance(currentPlayer);
 
                     //Next player turn. Option for checking rolling pair
                 } while( false );
