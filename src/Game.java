@@ -1,3 +1,5 @@
+import View.TUI;
+
 import java.util.Scanner;
 
 public class Game {
@@ -33,10 +35,12 @@ public class Game {
         // Instatiate Cup
         Cup rafleCup = new Cup();
 
+        //Print
+        TUI.startGame();
+
         // Start Game Loop (Break statement is used to end game)
         while (1==1){
-            System.out.println("Player " + (currentPlayer+1) + " Starts, Press Enter");
-            String enter = input.nextLine(); // Press enter to continue
+            TUI.printPlayersTurn(currentPlayer);
 
             // Get Player Balance
             // Roll
@@ -45,12 +49,12 @@ public class Game {
             // Get Sum
                 System.out.println("You rolled: " + rafleCup.getFacevalue1());
                 System.out.println("And then: " + rafleCup.getFacevalue2());
-                enter = input.nextLine(); // Press enter to continue
+                input.nextLine(); // Press enter to continue
 
             // Move Player
                 players[currentPlayer].changePlacement(sum);
                 System.out.println("Your placement is: " + (players[currentPlayer].getPlacement()));
-                enter = input.nextLine(); // Press enter to continue
+                input.nextLine(); // Press enter to continue
 
             // Complete Field Effect
                 System.out.println("You have arrived at: " + fields[sum-2].getName());
