@@ -13,5 +13,9 @@ public class TUI {
         Scanner input = new Scanner(System.in);
         input.nextLine();
     }
+    public static void printFaceValue(int facevalue1, int facevalue2){
+        //System.out.println(languageArray[6] + " " + rollSum);
+        System.out.println("You rolled: " + facevalue1 + " and " + facevalue2);
+    }
 
 }

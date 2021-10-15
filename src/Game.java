@@ -40,21 +40,20 @@ public class Game {
 
         // Start Game Loop (Break statement is used to end game)
         while (1==1){
+            //Print player turn
             TUI.printPlayersTurn(currentPlayer);
 
-            // Get Player Balance
-            // Roll
-                sum=rafleCup.getSum();
+            //Roll
+            sum = rafleCup.getSum();
 
-            // Get Sum
-                System.out.println("You rolled: " + rafleCup.getFacevalue1());
-                System.out.println("And then: " + rafleCup.getFacevalue2());
-                input.nextLine(); // Press enter to continue
+            //Print facevalue
+            TUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2());
+            input.nextLine(); // Press enter to continue
 
             // Move Player
-                players[currentPlayer].changePlacement(sum);
-                System.out.println("Your placement is: " + (players[currentPlayer].getPlacement()));
-                input.nextLine(); // Press enter to continue
+            players[currentPlayer].changePlacement(sum);
+            System.out.println("Your placement is: " + (players[currentPlayer].getPlacement()));
+            input.nextLine(); // Press enter to continue
 
             // Complete Field Effect
                 System.out.println("You have arrived at: " + fields[sum-2].getName());
