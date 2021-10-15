@@ -48,11 +48,13 @@ public class Game {
 
             //Print facevalue
             TUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2());
-            input.nextLine(); // Press enter to continue
+            input.nextLine();
 
             // Move Player
             players[currentPlayer].changePlacement(sum);
-            System.out.println("Your placement is: " + (players[currentPlayer].getPlacement()));
+
+            //Print player placement
+            TUI.printPlayerPlacement(players[currentPlayer].getPlacement());
             input.nextLine(); // Press enter to continue
 
             // Complete Field Effect

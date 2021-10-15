@@ -18,4 +18,9 @@ public class TUI {
         System.out.println("You rolled: " + facevalue1 + " and " + facevalue2);
     }
 
+    //Print current
+    public static void printPlayerPlacement(int placement){
+        System.out.println("Your placement is: " + placement);
+    }
+
 }
