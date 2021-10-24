@@ -26,5 +26,9 @@ public class TUI {
         System.out.println("Your placement is: " + placement);
         input.nextLine();
     }
-
+    public static void printTurnEffect(String field, String description, int rent) {
+        System.out.println("Your placement is: " + field);
+        System.out.println(description);
+        System.out.println("You Balance is changed by: "+ rent);
+    }
 }

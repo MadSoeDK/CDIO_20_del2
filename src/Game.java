@@ -55,13 +55,14 @@ public class Game {
             //Print player placement
             TUI.printPlayerPlacement(players[currentPlayer].getPlacement());
 
-            // Complete Field Effect
-                System.out.println("You have arrived at: " + fields[sum-2].getName());
-                System.out.println(fields[sum-2].getDescription());
-                System.out.println("You Balance is changed by: "+ fields[sum-2].getRent());
-                players[currentPlayer].setPlayerBalance(fields[sum-2].getRent());
-                System.out.println("You Balance is: " + players[currentPlayer].getPlayerBalance());
-                System.out.println("...");
+            // Complete Turn Effect
+            //System.out.println("You have arrived at: " + fields[sum-2].getName());
+            TUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent());
+            //System.out.println(fields[sum-2].getDescription());
+            //System.out.println("You Balance is changed by: "+ fields[sum-2].getRent());
+            players[currentPlayer].setPlayerBalance(fields[sum-2].getRent());
+            System.out.println("You Balance is: " + players[currentPlayer].getPlayerBalance());
+            System.out.println("...");
 
             // Next turn
             if (sum==10){
