@@ -35,7 +35,7 @@ public class Game {
         // Instatiate Cup
         Cup rafleCup = new Cup();
 
-        //Print
+
         TUI.startGame();
 
         TUI.language();
@@ -83,7 +83,7 @@ public class Game {
             }
 
             // End Game if player is
-            if (players[currentPlayer].getPlayerBalance()>3000){
+            if (players[currentPlayer].getPlayerBalance()>3000) {
                 //Check account balance
                 System.out.println("PLAYER " + (currentPlayer+1) + "HAS WON THE GAME BY EARNING 3000 POINTS");
                 break;
