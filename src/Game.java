@@ -38,6 +38,8 @@ public class Game {
         //Print
         TUI.startGame();
 
+        TUI.language();
+
         // Start Game Loop (Break statement is used to end game)
         while (1==1){
             //Print player turn
