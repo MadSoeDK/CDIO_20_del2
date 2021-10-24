@@ -5,6 +5,7 @@ public class Interface extends JFrame {
     private JLabel locationDesc;
     private JLabel diceRolls;
     private JPanel GUI_Form;
+    private JButton continueButton;
 
     Interface (){
         setTitle("Dice Game");
