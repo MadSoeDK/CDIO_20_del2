@@ -1,0 +1,6 @@
+ tur, tryk enter for at slå med terningen
+Du slog:
+ og
+Din placering er:
+Din balance er ændret med:
+Din balance er:
