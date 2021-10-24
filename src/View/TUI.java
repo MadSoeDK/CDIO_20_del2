@@ -56,4 +56,5 @@ public class TUI {
         System.out.println(languageArray[5] + ' ' + balance);
         System.out.println("...");
     }
+
 }

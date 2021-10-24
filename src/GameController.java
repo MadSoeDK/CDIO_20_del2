@@ -1,9 +1,7 @@
 public class GameController {
-    private int sum;
-    private int currentPlayer = 0;
 
     //Instantiate each Field and store in array
-    private Field[] fields = {
+    private static Field[] fields = {
             new Field("Tower", 250, "The Tower is quite tall yet seems abandoned, until you find a pile of gold and its decayed former owner..."),
             new Field("Crater", -100, "One wrong step and you tumble down the steep depths of The Crater, throwing plenty of your belongings out of your pockets..."),
             new Field("Palace gates", 100, "Marvelous Palace Gates greet you on your journey, beautiful decoration as far as the eye can see. They wouldn't notice one missing, right?"),
@@ -18,13 +16,12 @@ public class GameController {
     };
 
     //Instantiate each Player and store in array
-    private Player[] players = {
+    private static Player[] players = {
             new Player("Player 1"),
             new Player("Player 2")
     };
 
     // Instatiate Cup
-    private Cup rafleCup = new Cup();
-
+    public static Cup rafleCup = new Cup();
 
 }
