@@ -12,7 +12,7 @@ public class Player {
     }
 
     public void changePlacement(int amount) {
-        placement = placement + amount;
+        placement = amount;
     }
     public void setPlacement(int position) {
         placement = position;
@@ -20,5 +20,7 @@ public class Player {
     public int getPlacement() {
         return placement;
     }
-    public String getName(){ return name; }
+    public String getName(){ return name;}
+    public int getPlayerBalance(){return account.getBalance();}
+    public void setPlayerBalance(int amount) {account.setBalance(amount);}
 }

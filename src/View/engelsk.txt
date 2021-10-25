@@ -1,0 +1,6 @@
+ turn, press Enter to roll the dice
+You rolled:
+ and
+Your placement is:
+Your Balance is changed by:
+Your Balance is:

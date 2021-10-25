@@ -7,9 +7,10 @@ public class Field {
     private String description;
 
     //Sets up field name and field rent for each object by using the arrays
-    public Field (String fieldName, int fieldRent) {
-        fieldName = name;
-        fieldRent = rent;
+    public Field (String fieldname, int fieldrent, String fieldDescription) {
+        name = fieldname;
+        rent = fieldrent;
+        description = fieldDescription;
     }
     public int getRent() {
         return rent;

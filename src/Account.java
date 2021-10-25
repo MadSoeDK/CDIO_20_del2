@@ -7,7 +7,7 @@ public class Account {
         balance = 1000;
     }
 
-    public void changeBalance(int amount) {
+    public void setBalance(int amount) {
         balance = balance + amount;
     }
 
