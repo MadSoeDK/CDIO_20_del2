@@ -1,13 +1,16 @@
+package View;
+
 import javax.swing.*;
 
-public class Interface extends JFrame {
+public class Panel extends JFrame {
     private JLabel locationName;
     private JLabel locationDesc;
     private JLabel diceRolls;
     private JPanel GUI_Form;
     private JButton continueButton;
+    private JLabel gameText;
 
-    Interface (){
+    public Panel(){
         setTitle("Dice Game");
         setContentPane(GUI_Form);
         setSize(400,400);
@@ -15,7 +18,11 @@ public class Interface extends JFrame {
         setVisible(true);
     }
 
+    void setGameText (String text){
+        gameText.setText(text);
+    }
+
     public static void main(String[] args) {
-        Interface gui = new Interface();
+        Panel gui = new Panel();
     }
 }

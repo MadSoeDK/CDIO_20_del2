@@ -1,6 +1,6 @@
+import View.Panel;
 import View.TUI;
-
-import java.util.Scanner;
+import View.GUI;
 
 public class Game {
     // Set Variables
@@ -32,36 +32,40 @@ public class Game {
     private static Cup rafleCup = new Cup();
 
     public static void main(String[] args) {
-        TUI.startGame();
+        GUI.startGame();
 
-        TUI.language();
+        GUI.language();
 
-        // Start Game Loop (Break statement is used to end game)
+        // Initialize form
+        Panel panel = new Panel();
+
+        // Start Game Loop (Break statement is used to end game)1
         while (1==1){
             //Print player turn
-            TUI.printPlayersTurn(currentPlayer);
+
+            GUI.printPlayersTurn(currentPlayer, panel);
 
             //Roll
             sum = rafleCup.getSum();
 
             //Print facevalue
-            TUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2());
+            GUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2());
 
             // Move Player
             players[currentPlayer].changePlacement(sum);
 
             //Print player placement
-            TUI.printPlayerPlacement(players[currentPlayer].getPlacement());
+            GUI.printPlayerPlacement(players[currentPlayer].getPlacement());
 
             // Complete Turn Effect
                 //Prints fieldname, description and rents to the player
-                TUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent());
+                GUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent());
 
                 //Set playerbalance
                 players[currentPlayer].setPlayerBalance(fields[sum-2].getRent());
 
                 //Print player balance
-                TUI.printPlayerBalance(players[currentPlayer].getPlayerBalance());
+                GUI.printPlayerBalance(players[currentPlayer].getPlayerBalance());
 
             // Next turn
             if (sum==10){
