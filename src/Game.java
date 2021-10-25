@@ -49,23 +49,23 @@ public class Game {
             sum = rafleCup.getSum();
 
             //Print facevalue
-            GUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2());
+            GUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2(), panel);
 
             // Move Player
             players[currentPlayer].changePlacement(sum);
 
             //Print player placement
-            GUI.printPlayerPlacement(players[currentPlayer].getPlacement());
+            GUI.printPlayerPlacement(players[currentPlayer].getPlacement(), panel);
 
             // Complete Turn Effect
                 //Prints fieldname, description and rents to the player
-                GUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent());
+                GUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent(), panel);
 
                 //Set playerbalance
                 players[currentPlayer].setPlayerBalance(fields[sum-2].getRent());
 
                 //Print player balance
-                GUI.printPlayerBalance(players[currentPlayer].getPlayerBalance());
+                GUI.printPlayerBalance(players[currentPlayer].getPlayerBalance(), panel);
 
             // Next turn
             if (sum==10){

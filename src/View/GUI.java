@@ -37,23 +37,23 @@ public class GUI {
         input.nextLine();
     }
 
-    public static void printFaceValue(int facevalue1, int facevalue2) {
+    public static void printFaceValue(int facevalue1, int facevalue2, Panel panel) {
         Scanner input = new Scanner(System.in);
-        System.out.println(languageArray[1] + ' ' + facevalue1 + languageArray[2] + ' ' + facevalue2);
+        panel.setGameText(languageArray[1] + ' ' + facevalue1 + languageArray[2] + ' ' + facevalue2);
         input.nextLine();
     }
 
-    public static void printPlayerPlacement(int placement) {
+    public static void printPlayerPlacement(int placement, Panel panel) {
         Scanner input = new Scanner(System.in);
-        System.out.println(languageArray[3] + ' ' + placement);
+        panel.setGameText(languageArray[3] + ' ' + placement);
         input.nextLine();
     }
-    public static void printTurnEffect(String field, String description, int rent) {
-        System.out.println(languageArray[3] + ' ' + field);
-        System.out.println(description);
-        System.out.println(languageArray[4] + ' ' + rent);
+    public static void printTurnEffect(String field, String description, int rent, Panel panel) {
+        Scanner input = new Scanner(System.in);
+        panel.setGameText(languageArray[3] + ' ' + field + "\n"+ description + "\n"+description+"\n"+languageArray[4] + ' ' + rent);
+        input.nextLine();
     }
-    public static void printPlayerBalance(int balance) {
+    public static void printPlayerBalance(int balance, Panel panel) {
         System.out.println(languageArray[5] + ' ' + balance);
         System.out.println("...");
     }
