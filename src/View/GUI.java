@@ -39,18 +39,19 @@ public class GUI {
 
     public static void printFaceValue(int facevalue1, int facevalue2, Panel panel) {
         Scanner input = new Scanner(System.in);
-        panel.setGameText(languageArray[1] + ' ' + facevalue1 + languageArray[2] + ' ' + facevalue2);
+        panel.setDiceRollsText(languageArray[1] + ' ' + facevalue1 + languageArray[2] + ' ' + facevalue2);
         input.nextLine();
     }
 
     public static void printPlayerPlacement(int placement, Panel panel) {
         Scanner input = new Scanner(System.in);
-        panel.setGameText(languageArray[3] + ' ' + placement);
+        panel.setLocationNameText(languageArray[3] + ' ' + placement);
         input.nextLine();
     }
     public static void printTurnEffect(String field, String description, int rent, Panel panel) {
         Scanner input = new Scanner(System.in);
-        panel.setGameText(languageArray[3] + ' ' + field + "\n"+ description + "\n"+description+"\n"+languageArray[4] + ' ' + rent);
+        panel.setGameText(description+"\n"+languageArray[4] + ' ' + rent);
+        panel.setLocationNameText((languageArray[3] + ' ' + field));
         input.nextLine();
     }
     public static void printPlayerBalance(int balance, Panel panel) {
