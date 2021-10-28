@@ -2,6 +2,13 @@ import View.TUI;
 
 import java.util.Scanner;
 
+import static View.TUI.languageArray;
+
+/**
+ * Runs the game with the main method
+ * Contains arrays with fields, players and langaugeoutput.
+ * Contains raflecup object that contains dies.
+ */
 public class Game {
     // Set Variables
     private static int sum;
