@@ -9,7 +9,7 @@ public class Language {
 
     // Læser den rigtige sprog fil, og deler den op i et array
     public static String[] chooseLanguage(int a) {
-        languageArray = new String[20];
+        languageArray = new String[19];
 
         if (a == 1) {
             try {

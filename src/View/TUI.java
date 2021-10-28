@@ -9,7 +9,7 @@ public class TUI {
 
     Scanner input = new Scanner(System.in);
 
-    public static String[] languageArray;
+    public static String[] languageArray = new String[20];
 
     public static void startGame() {
         System.out.println("Velkommen til spillet.\n Vælg et sprog (Please choose a language).\n" +
