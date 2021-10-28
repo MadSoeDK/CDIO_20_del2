@@ -1,0 +1,7 @@
+ turn, press Enter to roll the dice
+You rolled:
+ and
+Your placement is:
+Your Balance is changed by:
+Your Balance is:
+HAS WON THE GAME BY EARNING 3000 POINTS

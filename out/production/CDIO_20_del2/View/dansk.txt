@@ -1,0 +1,7 @@
+ tur, tryk enter for at slå med terningen
+Du slog:
+ og
+Din placering er:
+Din balance er ændret med:
+Din balance er:
+HAR VUNDET SPILLET VED AT OPTJENE 3000 POINT
