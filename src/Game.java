@@ -10,20 +10,16 @@ import static View.TUI.languageArray;
  * Contains raflecup object that contains dies.
  */
 public class Game {
-    // Set Variables
     private static int sum;
     private static int currentPlayer = 0;
 
-    //Instantiate fields array
     private static Field[] fields = new Field[11];
 
-    //Instantiate each Player and store in array
     private static Player[] players = {
             new Player("Player 1"),
             new Player("Player 2")
     };
 
-    // Instatiate Cup
     private static Cup rafleCup = new Cup();
 
     public static void main(String[] args) {
