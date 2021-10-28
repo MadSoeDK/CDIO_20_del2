@@ -14,7 +14,7 @@ public class Account {
      * @param amount Positive or negative integer
      */
     public void setBalance(int amount) {
-        if(amount < 0 && amount > balance) {
+        if(amount < 0 && abs(amount) > balance) {
             balance = 0;
         } else {
             balance = balance + amount;
