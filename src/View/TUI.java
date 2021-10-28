@@ -2,6 +2,9 @@ package View;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
+/**
+ * Handles Text User Input
+ */
 public class TUI {
 
     Scanner input = new Scanner(System.in);
@@ -9,11 +12,14 @@ public class TUI {
     public static String[] languageArray;
 
     public static void startGame() {
-        System.out.println("Velkommen til spillet.\n Vælg venligst et sprog (Please choose a language).\n" +
+        System.out.println("Velkommen til spillet.\n Vælg et sprog (Please choose a language).\n" +
                 "For at vælge dansk så klik 1 og Enter. To choose english press 2 and Enter.");
     }
 
-    // Tager input til at vælge sprog
+    /**
+     * Makes the player choose a language in the commandline.
+     * @return a String array with flavour text for the game in the specified language
+     */
     public static void language (){
         int chosenLanguage;
 
