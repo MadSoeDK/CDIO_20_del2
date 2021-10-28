@@ -2,6 +2,8 @@ package View;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Panel extends JFrame {
     private JLabel locationName;
@@ -9,6 +11,9 @@ public class Panel extends JFrame {
     private JPanel GUI_Form;
     private JButton continueButton;
     private JTextArea gameText;
+    private JLabel player1Score;
+    private JLabel player2Score;
+    int button=0;
 
     public Panel(){
         setTitle("Dice Game");
@@ -18,8 +23,24 @@ public class Panel extends JFrame {
         setVisible(true);
         setResizable(false);
         gameText.setBackground(Color.white);
-        //gameText.setForeground(Color.black);
+        gameText.setForeground(Color.black);
         GUI_Form.setBackground(Color.white);
+        continueButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pressButton();
+            }
+        });
+    }
+
+    public void pressButton(){
+        button=1;
+    }
+    public int buttonPressed(){
+        return button;
+    }
+    public void resetButton(){
+        button=0;
     }
 
     void setGameText (String text){
@@ -34,11 +55,14 @@ public class Panel extends JFrame {
         locationName.setText(text);
     }
 
+    public void setPlayer1ScoreText (String text){
+        player1Score.setText(text);
+    }
+    public void setPlayer2ScoreText (String text){ player2Score.setText(text);
+    }
+
     public static void main(String[] args) {
         Panel gui = new Panel();
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }

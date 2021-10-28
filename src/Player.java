@@ -1,3 +1,5 @@
+import View.Panel;
+
 public class Player {
 
     private int placement;
@@ -22,5 +24,13 @@ public class Player {
     }
     public String getName(){ return name;}
     public int getPlayerBalance(){return account.getBalance();}
-    public void setPlayerBalance(int amount) {account.setBalance(amount);}
+    public void setPlayerBalance(int amount, Panel panel, int currentPlayer) {
+        account.setBalance(amount);
+        if (currentPlayer==1){
+            panel.setPlayer2ScoreText("Player 2 Score: " + getPlayerBalance());
+        }
+        else{
+            panel.setPlayer1ScoreText("Player 1 Score: " + getPlayerBalance());
+        }
+    }
 }

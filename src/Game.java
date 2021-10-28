@@ -62,14 +62,14 @@ public class Game {
                 GUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent(), panel);
 
                 //Set playerbalance
-                players[currentPlayer].setPlayerBalance(fields[sum-2].getRent());
+                players[currentPlayer].setPlayerBalance(fields[sum-2].getRent(), panel, currentPlayer);
 
                 //Print player balance
                 GUI.printPlayerBalance(players[currentPlayer].getPlayerBalance(), panel);
 
             // Next turn
             if (sum==10){
-                System.out.println("Because you ran from the Werewolves you gain an extra turn.");
+                GUI.printWerewolfTurn(panel, "Because you ran from the Werewolves you gain an extra turn.");
             }
             else
             {
@@ -85,7 +85,7 @@ public class Game {
             // End Game if player is
             if (players[currentPlayer].getPlayerBalance()>3000) {
                 //Check account balance
-                System.out.println("PLAYER " + (currentPlayer+1) + "HAS WON THE GAME BY EARNING 3000 POINTS");
+                GUI.printWerewolfTurn(panel,"PLAYER " + (currentPlayer+1) +  "HAS WON THE GAME BY EARNING 3000 POINTS");
                 break;
             }
         }

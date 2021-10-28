@@ -34,28 +34,39 @@ public class GUI {
     public static void printPlayersTurn(int player, Panel panel) {
         Scanner input = new Scanner(System.in);
         panel.setGameText("Player " + (player+1) + ' ' + languageArray[0]);
-        input.nextLine();
+
+        awaitButtonPress(panel);
     }
 
     public static void printFaceValue(int facevalue1, int facevalue2, Panel panel) {
         Scanner input = new Scanner(System.in);
         panel.setDiceRollsText(languageArray[1] + ' ' + facevalue1 + languageArray[2] + ' ' + facevalue2);
-        input.nextLine();
+        awaitButtonPress(panel);
     }
 
     public static void printPlayerPlacement(int placement, Panel panel) {
         Scanner input = new Scanner(System.in);
         panel.setLocationNameText(languageArray[3] + ' ' + placement);
-        input.nextLine();
+        //awaitButtonPress(panel);
     }
     public static void printTurnEffect(String field, String description, int rent, Panel panel) {
         Scanner input = new Scanner(System.in);
         panel.setGameText(description+"\n"+languageArray[4] + ' ' + rent);
         panel.setLocationNameText((languageArray[3] + ' ' + field));
-        input.nextLine();
+        awaitButtonPress(panel);
     }
     public static void printPlayerBalance(int balance, Panel panel) {
         System.out.println(languageArray[5] + ' ' + balance);
-        System.out.println("...");
+    }
+    public static void printWerewolfTurn(Panel panel, String string){
+        panel.setGameText(string);
+    }
+
+    static void awaitButtonPress(Panel panel){
+        while (panel.buttonPressed()==0)
+        {
+            System.out.println("Loop is Active");
+        }
+        panel.resetButton();
     }
 }
