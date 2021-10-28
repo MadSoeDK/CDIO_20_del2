@@ -8,8 +8,8 @@ class DieTest {
 
     @Test
     void getFacevalue() {
-        int[] counter = new int[6];
-        for (int i = 0; i < 10000; i++) {
+        float[] counter = new float[6];
+        for (int i = 0; i < 50000; i++) {
             int facevalue = die.getFacevalue();
             switch (facevalue) {
                 case 1:
@@ -31,12 +31,12 @@ class DieTest {
                     counter[5]++;
                     break;
                 default:
-                    assertTrue(facevalue >=1 && facevalue <=6);
-                    System.out.println("Value not between 1-6");
+                    assertTrue(facevalue >=1 && facevalue <=6, "Value not between 1-6");
             }
         }
         for (int i = 0; i < counter.length; i++) {
-            System.out.println(counter[i] + " - " + counter[i]/100 + "%");
+            assertEquals(8300, counter[i], 500, "Facevalue not between accepted delta (1%)");
+            System.out.println(counter[i] + " - " + counter[i]/500 + "%");
         }
     }
 }
