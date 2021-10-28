@@ -1,10 +1,12 @@
 import static java.lang.Math.abs;
 
+/**
+ * Account handles player balance
+ */
 public class Account {
 
     private int balance;
 
-    //Sets the player balance when a player is added
     public Account () {
         balance = 1000;
     }
