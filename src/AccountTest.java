@@ -7,9 +7,6 @@ class AccountTest {
     Account account = new Account();
 
     @Test
-    void getBalance() {
-        assertEquals(1000, account.getBalance(), "Starting balance is not correct.");
-    }
     void setBalance() {
 
         account.setBalance(100);
