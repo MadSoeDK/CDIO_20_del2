@@ -34,9 +34,9 @@ class DieTest {
                     assertTrue(facevalue >=1 && facevalue <=6, "Value not between 1-6");
             }
         }
-        for (int i = 0; i < counter.length; i++) {
-            assertEquals(8300, counter[i], 500, "Facevalue not between accepted delta (1%)");
-            System.out.println(counter[i] + " - " + counter[i]/500 + "%");
+        for (float v : counter) {
+            assertEquals(8300, v, 500, "Facevalue not between accepted delta (1%)");
+            System.out.println(v + " - " + v / 500 + "%");
         }
     }
 }
