@@ -1,5 +1,5 @@
 # IntelliJ
-out/
+out/**
 
 # User-specific stuff
 .idea/**/workspace.xml
