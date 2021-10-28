@@ -44,34 +44,33 @@ public class Game {
                 new Field("Goldmine", 650, TUI.languageArray[18])
         };
 
-        // Start Game Loop (Break statement is used to end game)
+        /** Start Game Loop (Break statement is used to end game */
         while ( 1 == 1 ){
-            //Print player turn
+
             TUI.printPlayersTurn(currentPlayer);
 
-            //Roll
             sum = rafleCup.getSum();
 
-            //Print facevalue
             TUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2());
 
-            // Move Player
+            /** Move player */
             players[currentPlayer].changePlacement(sum);
 
-            //Print player placement
+            /** Print player placement */
             TUI.printPlayerPlacement(players[currentPlayer].getPlacement());
 
-            // Complete Turn Effect
-                //Prints fieldname, description and rents to the player
-                TUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent());
+            /** Print turn effect */
+            TUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent());
 
-                //Set playerbalance
-                players[currentPlayer].setPlayerBalance(fields[sum-2].getRent());
+            /** Sets current playerbalance */
+            players[currentPlayer].setPlayerBalance(fields[sum-2].getRent());
 
-                //Print player balance
-                TUI.printPlayerBalance(players[currentPlayer].getPlayerBalance());
+            /** Prints current player balance */
+            TUI.printPlayerBalance(players[currentPlayer].getPlayerBalance());
 
-            // Next turn
+            /**
+             * If player rolled 10 - player gets extra turn
+             */
             if (sum==10){
                 System.out.println(TUI.languageArray[7]);
             }
@@ -83,7 +82,9 @@ public class Game {
                 }
             }
 
-            // End Game if player is
+            /**
+             * End game if the current players balance is above 3000
+             */
             if (players[currentPlayer].getPlayerBalance() > 3000) {
                 //Check account balance
                 System.out.println("PLAYER " + (currentPlayer+1) + TUI.languageArray[6]);
