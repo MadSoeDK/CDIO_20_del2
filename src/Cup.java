@@ -1,17 +1,19 @@
+/**
+ * Represents a raflecup that contains dies.
+ * Creates 2 dies upon initialization
+ */
 public class Cup {
 
-    // Initialize Variables
     private final int QUANTITY=2;
     private int sum;
     private int pair;
-    // What did the die show
+
     private int facevalue1;
     private int facevalue2;
 
     Die Die1;
     Die Die2;
 
-    // Create Die Objects
     public Cup() {
         Die1 = new Die();
         Die2 = new Die();
@@ -21,7 +23,6 @@ public class Cup {
         facevalue1 = Die1.getFacevalue();
         facevalue2 = Die2.getFacevalue();
         sum = facevalue1+facevalue2;
-        //System.out.println("Their sum is: "+sum);
         return sum;
     }
     public int getFacevalue1() {
