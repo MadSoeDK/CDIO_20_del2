@@ -14,6 +14,8 @@ public class Panel extends JFrame {
     private JLabel player1Score;
     private JLabel player2Score;
     private JLabel playerTurn;
+    private JButton danishButton;
+    private JButton englishButton;
     int button=0;
 
     public Panel(){
@@ -32,10 +34,25 @@ public class Panel extends JFrame {
                 pressButton();
             }
         });
+        danishButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent dan) {
+                setLanguage(1);
+            }
+        });
+        englishButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent eng) {
+                setLanguage(2);
+            }
+        });
     }
 
     public void pressButton(){
         button=1;
+    }
+    public void setLanguage(int a){
+        GUI.language(a);
     }
     public int buttonPressed(){
         return button;

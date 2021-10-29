@@ -15,18 +15,8 @@ public class GUI {
     }
 
     // Tager input til at vælge sprog
-    public static void language (){
-        int chosenLanguage;
-
-        do {
-            try {
-                Scanner input1 = new Scanner(System.in);
-                chosenLanguage = input1.nextInt();
-            }
-            catch (InputMismatchException e){
-                chosenLanguage = 0;
-            }
-        } while ((chosenLanguage != 1) && (chosenLanguage != 2));
+    public static void language (int chosenLanguage){
+        //int chosenLanguage;
 
         languageArray = Language.chooseLanguage(chosenLanguage);
     }
@@ -65,7 +55,7 @@ public class GUI {
     static void awaitButtonPress(Panel panel){
         while (panel.buttonPressed()==0)
         {
-            System.out.println("Loop is Active");
+            System.out.println("");
         }
         panel.resetButton();
     }

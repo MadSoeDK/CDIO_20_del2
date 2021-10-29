@@ -34,10 +34,10 @@ public class Game {
     public static void main(String[] args) {
         GUI.startGame();
 
-        GUI.language();
-
         // Initialize form
         Panel panel = new Panel();
+
+        GUI.language(2);
 
         // Start Game Loop (Break statement is used to end game)1
         while (1==1){

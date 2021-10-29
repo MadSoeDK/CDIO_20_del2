@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.Panel">
-  <grid id="27dc6" binding="GUI_Form" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="GUI_Form" layout-manager="GridLayoutManager" row-count="11" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="20" left="10" bottom="10" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="561" height="505"/>
+      <xy x="20" y="20" width="561" height="763"/>
     </constraints>
     <properties>
       <background color="-1313025"/>
@@ -26,14 +26,6 @@
           <text value="&quot;...&quot;"/>
         </properties>
       </component>
-      <vspacer id="2d8d8">
-        <constraints>
-          <grid row="7" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-            <minimum-size width="10" height="10"/>
-            <maximum-size width="20" height="20"/>
-          </grid>
-        </constraints>
-      </vspacer>
       <vspacer id="d6d36">
         <constraints>
           <grid row="6" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
@@ -43,15 +35,15 @@
       </vspacer>
       <component id="36937" class="javax.swing.JButton" binding="continueButton" default-binding="true">
         <constraints>
-          <grid row="9" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Continue"/>
+          <text value="Continue/Videre"/>
         </properties>
       </component>
       <component id="7df6d" class="javax.swing.JLabel" binding="player1Score">
         <constraints>
-          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Player 1 Score: 1000"/>
@@ -75,12 +67,13 @@
           <font name="Arial"/>
           <foreground color="-16777216"/>
           <lineWrap value="true"/>
+          <text value="Choose Language: Then Press &quot;Continue&quot;  (Vælg Sprog: Klik derefter på &quot;Videre&quot;)"/>
           <wrapStyleWord value="true"/>
         </properties>
       </component>
       <component id="38c96" class="javax.swing.JLabel" binding="player2Score">
         <constraints>
-          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <horizontalTextPosition value="11"/>
@@ -89,7 +82,7 @@
       </component>
       <hspacer id="76236">
         <constraints>
-          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <maximum-size width="10" height="-1"/>
           </grid>
         </constraints>
@@ -105,6 +98,22 @@
         </constraints>
         <properties>
           <text value="Player Turn:"/>
+        </properties>
+      </component>
+      <component id="72090" class="javax.swing.JButton" binding="danishButton">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Dansk/Danish"/>
+        </properties>
+      </component>
+      <component id="22c2e" class="javax.swing.JButton" binding="englishButton">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Engelsk/English"/>
         </properties>
       </component>
     </children>
