@@ -27,53 +27,53 @@ public class Game {
 
         // Initialize form
         Panel panel = new Panel();
-        TUI.language();
+        //TUI.language();
         GUI.language(2);
 
         /**
          * Load in field text after language have been choosen
          */
         Field[] fields = {
-                new Field("Tower", 250, TUI.languageArray[8]),
-                new Field("Crater", -100, TUI.languageArray[9]),
-                new Field("Palace gates", 100, TUI.languageArray[10]),
-                new Field("Cold Desert", -20, TUI.languageArray[11]),
-                new Field("Walled city", 180, TUI.languageArray[12]),
-                new Field("Monastery", 0, TUI.languageArray[13]),
-                new Field("Black Cave", -70, TUI.languageArray[14]),
-                new Field("Huts in the Mountain", 60, TUI.languageArray[15]),
-                new Field("The Werewall (Werewolf-Wall)", -80, TUI.languageArray[16]),
-                new Field("The Pit", -50, TUI.languageArray[17]),
-                new Field("Goldmine", 650, TUI.languageArray[18])
+                new Field("Tower", 250, GUI.languageArray[8]),
+                new Field("Crater", -100, GUI.languageArray[9]),
+                new Field("Palace gates", 100, GUI.languageArray[10]),
+                new Field("Cold Desert", -20, GUI.languageArray[11]),
+                new Field("Walled city", 180, GUI.languageArray[12]),
+                new Field("Monastery", 0, GUI.languageArray[13]),
+                new Field("Black Cave", -70, GUI.languageArray[14]),
+                new Field("Huts in the Mountain", 60, GUI.languageArray[15]),
+                new Field("The Werewall (Werewolf-Wall)", -80, GUI.languageArray[16]),
+                new Field("The Pit", -50, GUI.languageArray[17]),
+                new Field("Goldmine", 650, GUI.languageArray[18])
         };
 
         /** Start Game Loop (Break statement is used to end game */
         while ( 1 == 1 ){
 
-            TUI.printPlayersTurn(currentPlayer);
+            GUI.printPlayersTurn(currentPlayer, panel);
 
             sum = rafleCup.getSum();
 
             //Print facevalue
             GUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2(), panel);
-            TUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2());
+            //TUI.printFaceValue(rafleCup.getFacevalue1(), rafleCup.getFacevalue2());
 
             /** Move player */
             players[currentPlayer].changePlacement(sum);
 
             /** Print player placement */
-            TUI.printPlayerPlacement(players[currentPlayer].getPlacement());
+            GUI.printPlayerPlacement(players[currentPlayer].getPlacement(), panel);
 
             /** Print turn effect */
-            TUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent());
+            GUI.printTurnEffect(fields[sum-2].getName(), fields[sum-2].getDescription(), fields[sum-2].getRent(), panel);
 
             /** Sets current playerbalance */
-            players[currentPlayer].setPlayerBalance(fields[sum-2].getRent());
+            players[currentPlayer].setPlayerBalance(fields[sum-2].getRent(), panel, currentPlayer);
 
                 //Print player balance
                 GUI.printPlayerBalance(players[currentPlayer].getPlayerBalance(), panel);
             /** Prints current player balance */
-            TUI.printPlayerBalance(players[currentPlayer].getPlayerBalance());
+            GUI.printPlayerBalance(players[currentPlayer].getPlayerBalance(), panel);
 
             /**
              * If player rolled 10 - player gets extra turn
