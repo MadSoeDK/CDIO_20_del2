@@ -10,22 +10,6 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="fc1d9" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="You Rolled:"/>
-        </properties>
-      </component>
-      <component id="aaa04" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="You Landed on:"/>
-        </properties>
-      </component>
       <component id="80cfe" class="javax.swing.JLabel" binding="diceRolls">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
@@ -75,7 +59,7 @@
       </component>
       <vspacer id="bc11b">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <component id="88a0e" class="javax.swing.JTextArea" binding="gameText">
@@ -110,6 +94,19 @@
           </grid>
         </constraints>
       </hspacer>
+      <vspacer id="88a4e">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="d77cd" class="javax.swing.JLabel" binding="playerTurn">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Player Turn:"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

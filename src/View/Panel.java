@@ -13,6 +13,7 @@ public class Panel extends JFrame {
     private JTextArea gameText;
     private JLabel player1Score;
     private JLabel player2Score;
+    private JLabel playerTurn;
     int button=0;
 
     public Panel(){
@@ -45,6 +46,10 @@ public class Panel extends JFrame {
 
     void setGameText (String text){
         gameText.setText(text);
+    }
+
+    void setPlayerTurnText (String text){
+        playerTurn.setText(text);
     }
 
     void setDiceRollsText (String text){

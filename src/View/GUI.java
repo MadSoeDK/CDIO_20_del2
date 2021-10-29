@@ -34,14 +34,14 @@ public class GUI {
     public static void printPlayersTurn(int player, Panel panel) {
         Scanner input = new Scanner(System.in);
         panel.setGameText("Player " + (player+1) + ' ' + languageArray[0]);
-
+        panel.setPlayerTurnText("Player " + (player+1) + "'s Turn");
         awaitButtonPress(panel);
     }
 
     public static void printFaceValue(int facevalue1, int facevalue2, Panel panel) {
         Scanner input = new Scanner(System.in);
         panel.setDiceRollsText(languageArray[1] + ' ' + facevalue1 + languageArray[2] + ' ' + facevalue2);
-        awaitButtonPress(panel);
+        //awaitButtonPress(panel);
     }
 
     public static void printPlayerPlacement(int placement, Panel panel) {
